@@ -1,68 +1,115 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --background: 0 0% 10%;
+    --foreground: 0 0% 96%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 24 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 13% 23%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 24 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 96%;
+
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 24 100% 50%;
+
+    --radius: 0.5rem;
   }
-  a:hover {
-    color: #747bff;
+}
+
+@layer base {
+  * {
+    @apply border-border;
   }
-  button {
-    background-color: #f9f9f9;
+
+  body {
+    @apply bg-welding-dark text-welding-light font-body;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(26, 26, 26, 0.98),
+        rgba(26, 26, 26, 0.98)
+      ),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23333333' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-industrial tracking-wider text-welding-light;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-welding-orange text-white font-bold py-3 px-6 rounded-sm 
+           shadow-[0_0_15px_rgba(255,110,0,0.5)] transition-all duration-300
+           hover:shadow-[0_0_25px_rgba(255,110,0,0.7)] hover:translate-y-[-2px];
+  }
+
+  .nav-link {
+    @apply relative font-industrial tracking-wider text-lg px-4 py-2 text-welding-light transition-all duration-300
+           after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-welding-orange
+           after:left-0 after:bottom-0 after:transition-all after:duration-300
+           hover:text-welding-orange hover:after:w-full;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-industrial tracking-wider relative
+           inline-block mb-12 pb-2 after:content-[''] after:absolute after:bottom-0
+           after:left-0 after:w-16 after:h-1 after:bg-welding-orange;
+  }
+
+  .service-card {
+    @apply relative bg-gradient-to-br from-welding-gray to-welding-gray-light 
+           border border-welding-gray-lighter/30 rounded-md p-6 transition-all duration-300
+           hover:shadow-[0_0_20px_rgba(255,110,0,0.2)] hover:border-welding-orange/50;
+  }
+
+  .metal-background {
+    @apply bg-gradient-to-br from-welding-gray to-welding-gray-light bg-[length:200%_100%]
+           animate-metallic-shine border border-welding-gray-lighter/30 rounded-md;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .spark-container {
+    @apply relative overflow-hidden;
+  }
+
+  .spark {
+    @apply absolute w-1 h-1 rounded-full bg-welding-orange animate-spark;
+  }
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
 }
