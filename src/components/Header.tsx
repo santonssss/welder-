@@ -18,10 +18,8 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-welding-dark/90 backdrop-blur-md py-2 shadow-lg"
-          : "py-4 bg-transparent"
+        "sticky top-0 flex items-center left-0 h-20 w-full z-50 transition-all duration-300",
+        isScrolled ? " backdrop-blur-md py-2 shadow-lg" : "py-4 bg-transparent"
       )}
     >
       <div className="container mx-auto px-6">
@@ -50,7 +48,7 @@ const Header = () => {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden focus:outline-none text-welding-light hover:text-welding-orange transition-colors"
+            className="md:hidden focus:outline-none z-[100] text-welding-light hover:text-welding-orange transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -60,7 +58,7 @@ const Header = () => {
 
       <div
         className={cn(
-          "md:hidden absolute top-full left-0 w-full bg-welding-gray/95 backdrop-blur-md shadow-xl transition-all duration-300 ease-in-out transform",
+          "md:hidden absolute z-50 top-full left-0 w-full bg-welding-gray/95 backdrop-blur-md shadow-xl transition-all duration-300 ease-in-out transform",
           isMobileMenuOpen
             ? "translate-y-0 opacity-100"
             : "-translate-y-full opacity-0"

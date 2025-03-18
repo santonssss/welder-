@@ -2,7 +2,7 @@ import { ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen mb-10 pt-10 ">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070')] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-gradient-to-b from-welding-dark/80 via-welding-dark/70 to-welding-dark"></div>
       </div>
@@ -24,8 +24,8 @@ const HeroSection = () => {
         ))}
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-2xl">
+      <div className="container mx-auto px-6 relative z-10 ">
+        <div className="max-w-2xl min-h-screen flex flex-col  justify-center">
           <span
             className="inline-block py-1 px-3 text-welding-orange border border-welding-orange text-sm tracking-wider mb-4 animate-fade-in opacity-0"
             style={{ animationDelay: "0.2s" }}
@@ -66,10 +66,10 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute -bottom-1 left-1/2 right-1/2 transform -translate-x-1/2 animate-bounce">
         <a
           href="#about"
-          className="flex flex-col items-center text-welding-light/80 hover:text-welding-orange transition-colors"
+          className="flex flex-col items-center text-center text-welding-light/80 hover:text-welding-orange transition-colors"
         >
           <span className="text-sm mb-1">ПРОКРУТИТЕ ВНИЗ</span>
           <ChevronDown size={20} />
