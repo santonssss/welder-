@@ -134,7 +134,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className="text-welding-light/70">
-                Работаем круглосуточно
+                Работаю круглосуточно
                 <br />
                 Выезд по Казахстану, России и Узбекистану
               </li>
@@ -148,7 +148,8 @@ const Footer = () => {
           </p>
           <p className="text-welding-light/60 text-sm mt-2 md:mt-0 flex items-center space-x-2">
             <span>
-              Разработан сайт. Сделано с точностью и профессионализмом
+              Разработал сайт Калмуратов Сарвар. Сделано с точностью и
+              профессионализмом
             </span>
             <a
               href="https://t.me/santohah"
