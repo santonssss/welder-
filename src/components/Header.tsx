@@ -33,16 +33,16 @@ const Header = () => {
 
           <nav className="hidden md:flex items-center space-x-1">
             <a href="#about" className="nav-link">
-              ABOUT
+              Обо мне
             </a>
             <a href="#services" className="nav-link">
-              SERVICES
+              Сервисы
             </a>
             <a href="#portfolio" className="nav-link">
-              PORTFOLIO
+              Портфолио
             </a>
             <a href="#contact" className="nav-link">
-              CONTACT
+              Контакты
             </a>
           </nav>
 
