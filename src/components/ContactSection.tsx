@@ -1,19 +1,6 @@
-import React from "react";
-import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
-import { useToast } from "@hooks/use-toast";
+import { MapPin, Phone, Clock, Instagram } from "lucide-react";
 
 const ContactSection = () => {
-  const { toast } = useToast();
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    toast({
-      title: "Message received!",
-      description: "Thank you for contacting me. I'll get back to you shortly.",
-      duration: 5000,
-    });
-  };
-
   return (
     <section id="contact" className="py-24 relative">
       <div className="absolute inset-0 bg-[url('https://img.freepik.com/free-photo/male-working-with-welding-torch_181624-47275.jpg?ga=GA1.1.482794500.1737645301&semt=ais_hybrid')] bg-cover bg-center bg-no-repeat opacity-10"></div>

@@ -1,4 +1,4 @@
-import { Flame, Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Flame, Instagram } from "lucide-react";
 import Telegram from "../assets/tg-icon.png";
 
 const Footer = () => {
