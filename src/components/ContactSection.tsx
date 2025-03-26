@@ -6,10 +6,11 @@ const ContactSection = () => {
       <div className="absolute inset-0 bg-[url('https://img.freepik.com/free-photo/male-working-with-welding-torch_181624-47275.jpg?ga=GA1.1.482794500.1737645301&semt=ais_hybrid')] bg-cover bg-center bg-no-repeat opacity-10"></div>
       <div className="container  mx-auto px-6 relative z-10">
         <div className="text-center  max-w-2xl mx-auto mb-16">
-          <h2 className="section-title">CONTACT ME</h2>
+          <h2 className="section-title">СВЯЖИТЕСЬ СО МНОЙ</h2>
           <p className="text-lg opacity-90">
-            Ready to discuss your project? Get in touch for expert consultation
-            and exceptional welding services tailored to your needs.
+            Готовы обсудить ваш проект? Свяжитесь с мной для получения
+            консультации специалиста и эксклюзивных сварочных услуг,
+            адаптированных к вашим потребностям.
           </p>
         </div>
 
